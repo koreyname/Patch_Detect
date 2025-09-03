@@ -1,0 +1,22 @@
+# ---- Core DL (已装好 GPU 版 PyTorch 的话可注释掉这两行以防被覆盖) ----
+torch
+torchvision
+
+# ---- YOLOv8 引擎 ----
+ultralytics==8.3.190
+
+# ---- 数值与图像处理 ----
+numpy>=1.23
+pillow>=9.4
+
+# headless 版 OpenCV（服务器/无桌面环境推荐）；需要 cv2.imshow 时改成 opencv-python
+opencv-python-headless>=4.8
+
+# ---- 训练可视化（保存曲线/图表）----
+matplotlib>=3.7
+
+# ---- 可选：导出/加速（按需启用；不需要就保留注释）----
+# onnxruntime-gpu>=1.17   # 用于 ONNX 推理（GPU）
+# onnx>=1.14              # 导出 ONNX 时需要
+# tensorrt                 # 若你要导出 TensorRT engine，再依据平台安装
+# psutil>=5.9             # 资源监控（Ultralytics 会用到；通常作为依赖已安装）
