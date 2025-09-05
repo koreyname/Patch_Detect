@@ -18,10 +18,10 @@ import cv2
 
 # ======================== 固定参数（按需修改） ==========================
 # 输入图像目录
-INPUT_DIR = Path("/root/autodl-tmp/ultralytics-main/dataset/final/pure2/images/val")
+INPUT_DIR = Path("/root/autodl-tmp/ultralytics-main/datasets/final/natual_high/images/train")
 
 # 数据集根目录（会自动创建 images/train、labels/train；val 可为空）
-DATASET_ROOT = Path("/root/autodl-tmp/ultralytics-main/dataset/LowTexture/final/pure2")
+DATASET_ROOT = Path("/root/autodl-tmp/ultralytics-main/datasets/LowTexture/natual_high")
 
 # YOLO 输出子目录
 IMAGES_TRAIN = DATASET_ROOT / "images" / "train"

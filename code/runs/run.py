@@ -23,7 +23,7 @@ MODEL_PATTERN = "*.pt"
 SORT_BY       = "name"   # "name" | "mtime" | "size"
 REVERSE_SORT  = False
 
-INPUT_DIR  = Path("/root/autodl-tmp/ultralytics-main/datasets/final/pure/images/val/")
+INPUT_DIR  = Path("/root/autodl-tmp/ultralytics-main/datasets/final/images/val/")
 OUTPUT_DIR = Path("/root/autodl-tmp/ultralytics-main/Results/tests")  # 仅用于汇总文件
 
 IMGSZ      = 640

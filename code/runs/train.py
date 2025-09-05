@@ -19,8 +19,8 @@ from PIL import Image
 import os
 
 # ==================== 写死路径与参数（按需自行修改） ====================
-PATCH_DS = Path("/root/autodl-tmp/ultralytics-main/datasets/final/color")
-LOWTEX_DS = Path("/root/autodl-tmp/ultralytics-main/Prepare/LowTexture/final/color")
+PATCH_DS = Path("/root/autodl-tmp/ultralytics-main/datasets/final/natual_high")
+LOWTEX_DS = Path("/root/autodl-tmp/ultralytics-main/Prepare/LowTexture/natual_high")
 WORK_DS = PATCH_DS / "_singleclass_work"
 
 PHASE1_LIST = WORK_DS / "train_weighted_phase1.txt"

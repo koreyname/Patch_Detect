@@ -26,8 +26,8 @@ MODEL_PATTERN = "*.pt"
 SORT_BY       = "name"   # "name" | "mtime" | "size"
 REVERSE_SORT  = False
 
-INPUT_DIR  = Path("/root/autodl-tmp/ultralytics-main/datasets/final/all/images/val")
-OUTPUT_DIR = Path("/root/autodl-tmp/ultralytics-main/Results/all")
+INPUT_DIR  = Path("/root/autodl-tmp/ultralytics-main/datasets/final/images/val")
+OUTPUT_DIR = Path("/root/autodl-tmp/ultralytics-main/Results/tests")
 
 IMGSZ      = 640
 CONF_THRES = 0.5
@@ -366,7 +366,7 @@ def main():
             if not ok:
                 shutil.copy2(img_path, patches_root / "all" / img_path.name)
                 bad_files.append(f"{img_path} :: {reason}")
-                if n_total % 50 == 0:
+                if n_total % 100 == 0:
                     acc_now = (n_tp_img / n_total * 100.0) if n_total > 0 else 0.0
                     print(f"[INFO] 进度: {n_total}/{len(imgs)} 已处理，当前准确率(ONLY-TP/样本): {acc_now:.2f}%")
                 continue
@@ -561,7 +561,7 @@ def main():
         fn_sum += chosen["fn"]
 
         # —— 进度（逐图口径） —— #
-        if n_total % 50 == 0:
+        if n_total % 100 == 0:
             acc_now = (n_tp_img / n_total * 100.0) if n_total > 0 else 0.0
             print(f"[INFO] 进度: {n_total}/{len(imgs)} 已处理，当前准确率(ONLY-TP/样本): {acc_now:.2f}%")
 
